@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/welcome_screen.dart';
+import 'package:flutter_app/theme.dart';
+
 
 
 
@@ -11,9 +13,12 @@ class MyApp extends StatelessWidget{
   static const String _title = 'Flutter code Sample';
   @override
   Widget build(BuildContext context){
-    return const MaterialApp(
+    return  MaterialApp(
       title: _title,
-      home: WelcomeScreen(),
+      debugShowCheckedModeBanner: false,
+      theme: lightThemeData(context),
+      darkTheme: darkThemeData(context),
+      home: const WelcomeScreen(),
     );
   }
 }

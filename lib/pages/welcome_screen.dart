@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/constants.dart';
+import 'package:flutter_app/pages/signin_or_signup_pages.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key:key);
@@ -36,7 +37,12 @@ class WelcomeScreen extends StatelessWidget {
             const Spacer(flex: 2),
             FittedBox(
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SigninOrSignupPages(),
+                    ),
+                  ),
                   child: Row(
                     children: [
                       Text(
